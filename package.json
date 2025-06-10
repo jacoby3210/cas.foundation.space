@@ -1,0 +1,16 @@
+{
+  "author": "jacoby3210@gmail.com",
+  "license": "MIT",
+  "name": "cas.foundation.space",
+  "description": "Organize workspace for JS project development with support for deployment on various platforms..",
+  "version": "0.0.1",
+  "scripts": {},
+  "bugs": {
+    "url": "https://github.com/jacoby3210/cas.foundation.space/issues"
+  },
+  "homepage": "https://github.com/jacoby3210/cas.foundation.space#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacoby3210/cas.foundation.space.git"
+  }
+}
