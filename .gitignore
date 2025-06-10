@@ -1,0 +1,10 @@
+/bin/
+/builds/
+/deploy/
+/dist/
+/data/
+/packages/
+
+/node_modules/
+*.log
+package-lock.json
