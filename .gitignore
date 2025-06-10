@@ -1,0 +1,15 @@
+bin
+build
+builds
+data
+deploy
+dist
+env
+environment
+environments
+modules
+node_modules
+packages
+
+*.log
+package-lock.json
