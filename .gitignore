@@ -1,8 +1,11 @@
 /bin/
 /builds/
+/data/
 /deploy/
 /dist/
-/data/
+/env/
+/environment/
+/environments/
 /packages/
 
 /node_modules/
