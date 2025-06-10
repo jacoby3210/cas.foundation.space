@@ -5,7 +5,7 @@
   "description": "Organize workspace for JS project development with support for deployment on various platforms..",
   "version": "0.0.1",
   "scripts": {
-    "cas-launch": "node ./tools/scripts/launch.mjs"
+    "cas-launch": "clear & node ./tools/scripts/launch.mjs"
   },
   "bugs": {
     "url": "https://github.com/jacoby3210/cas.foundation.space/issues"
@@ -14,5 +14,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jacoby3210/cas.foundation.space.git"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }
