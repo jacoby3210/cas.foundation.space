@@ -2,3 +2,7 @@
 	path = env/desktop.sciter
 	url = https://github.com/jacoby3210/cas.foundation.env.desktop.sciter
 	branch = main
+[submodule "env/common"]
+	path = env/common
+	url = https://github.com/jacoby3210/cas.foundation.env.common
+	branch = main
