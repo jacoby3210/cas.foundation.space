@@ -6,3 +6,7 @@
 	path = env/desktop.sciter
 	url = https://github.com/jacoby3210/cas.foundation.env.desktop.sciter
 	branch = main
+[submodule "env/web.vite"]
+	path = env/web.vite
+	url = https://github.com/jacoby3210/cas.foundation.env.web.vite
+	branch = main
