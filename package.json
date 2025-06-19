@@ -6,7 +6,9 @@
   "version": "0.0.1",
   "scripts": {
     "cas-launch": "node ./tools/scripts/launch.mjs",
-    "cas-setup": "node ./tools/scripts/setup.mjs"
+    "cas-setup": "node ./tools/scripts/setup.mjs",
+    "cas-start": "node ./tools/scripts/launch.mjs cas-start",
+    "cas-stop": "node ./tools/scripts/launch.mjs cas-stop"
   },
   "bugs": {
     "url": "https://github.com/jacoby3210/cas.foundation.space/issues"
