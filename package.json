@@ -5,7 +5,8 @@
   "description": "Organize workspace for JS project development with support for deployment on various platforms..",
   "version": "0.0.1",
   "scripts": {
-    "cas-launch": "node ./tools/scripts/launch.mjs"
+    "cas-launch": "node ./tools/scripts/launch.mjs",
+    "cas-setup": "node ./tools/scripts/setup.mjs"
   },
   "bugs": {
     "url": "https://github.com/jacoby3210/cas.foundation.space/issues"
