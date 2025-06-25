@@ -15,24 +15,22 @@
       }
     </style>
     <script type="module">
-      import { module as envSciter } from "./env/desktop.sciter/code/index.mjs";
-      import { module as envWeb } from "./env/web.vite/code/index.mjs";
-      // import { base } from "env/desktop.sciter/code/module.mjs";
+      // target platform connection
+      import { module as sciter } from "./env/desktop.sciter/code/index.mjs";
+      import { module as vite } from "./env/web.vite/code/index.mjs";
 
-      window.config = "";
-      fetch("tools/config/current.cfg")
-        .then((response) => {
-          if (!response.ok)
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          return response.text();
-        })
-        .then((text) => {
-          window.configText = text;
-          console.log("Loaded config:", window.configText);
-        })
-        .catch((error) => {
-          console.error("Error loading config:", error);
-        });
+      const environment = (function () {
+        const rs = (function () {
+          if (typeof Sciter !== "undefined") return ["desktop.sciter", sciter];
+          return ["web.vite", vite];
+        })();
+        return { name: rs[0], module: rs[1] };
+      })();
+
+      // target package connection
+      import { module as base } from "./packages/base/code/index.mjs";
+      globalThis.CAS = { ...environment.module, ...base };
+      console.log(CAS);
     </script>
   </head>
   <body>
