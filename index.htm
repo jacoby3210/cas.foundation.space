@@ -15,24 +15,21 @@
       }
     </style>
     <script type="module">
-      import { module as envSciter } from "./env/desktop.sciter/code/index.mjs";
-      import { module as envWeb } from "./env/web.vite/code/index.mjs";
-      // import { base } from "env/desktop.sciter/code/module.mjs";
+      // target platform connection
+      const environment = (function () {
+        const name = (function () {
+          if (typeof loadScript !== "undefined") return "desktop.sciter";
+          return "web.vite";
+        })();
+        return { name, path: `./env/${name}/code/index.mjs` };
+      })();
+      environment.source = await import(environment.path);
 
-      window.config = "";
-      fetch("tools/config/current.cfg")
-        .then((response) => {
-          if (!response.ok)
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          return response.text();
-        })
-        .then((text) => {
-          window.configText = text;
-          console.log("Loaded config:", window.configText);
-        })
-        .catch((error) => {
-          console.error("Error loading config:", error);
-        });
+      // target package connection
+      import { module as base } from "./packages/base/code/index.mjs";
+      globalThis.cas = { ...environment.source.module, ...base };
+      globalThis.cas.engine.test.run(__DIR__);
+      // console.log(cas);
     </script>
   </head>
   <body>
